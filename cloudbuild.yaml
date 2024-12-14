@@ -10,7 +10,7 @@ steps:
     args:
       - '-c'
       - |
-        gsutil -m rsync -r -d build/ gs://mi-bucket-deploy
+        gsutil -m rsync -r -d build/ gs://m-ubeira-static-website-bucket
 
 options:
   logging: NONE
