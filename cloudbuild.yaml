@@ -1,0 +1,31 @@
+steps:
+  # Install dependencies
+  - name: 'node:16' # Replace '16' with the Node.js version used by your project
+    entrypoint: 'npm'
+    args: ['install']
+
+  # Build the project
+  - name: 'node:16'
+    entrypoint: 'npm'
+    args: ['run', 'build']
+    env:
+      - 'CI=false' # Suppress warnings during the build process
+
+  # Deploy to Google Cloud Storage
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gsutil -m rsync -r -d build/ gs://m-ubeira-static-website-bucket
+
+  # Set permissions for the bucket (optional, if you want public access)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gsutil iam ch allUsers:objectViewer gs://m-ubeira-static-website-bucket
+
+# Define a trigger to deploy automatically when changes are pushed to your repository
+timeout: 1200s # 20 minutes timeout
