@@ -14,7 +14,7 @@ const imagePaths = [
 const ImageCaoursel = (props) => {
 
   const imagesRef = useRef(null);
-  let scrollTimeout = useRef(null);
+  // let scrollTimeout = useRef(null);
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,7 +37,7 @@ const ImageCaoursel = (props) => {
       <div className={props.className}>
         <div className="images" ref={imagesRef}>
           {imagePaths.map((path, index) => (
-            <img key={index} src={path} alt={`Image ${index + 1}`} className="image" />
+            <img key={index} src={path} alt={`work ${index + 1}`} className="image" />
           ))}
         </div>
       </div>
