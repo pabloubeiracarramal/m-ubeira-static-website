@@ -1,0 +1,76 @@
+.main {
+  overflow-y: scroll;
+  height: 100vh;
+
+  .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    margin-top: 7vw;
+    margin-left: 2vw;
+    margin-right: 10vw;
+
+    padding: 3vw;
+
+    display: flex;
+    align-items: center;
+    gap: 7vw;
+
+    transition: background-color 0.25s ease;
+
+    &.bg-added {
+      background-color: rgba(255, 255, 255, 0.808); 
+      border-radius: 3vw;
+    }
+
+    .logo {
+      width: 20vw;
+
+      path {
+        fill: var(--primary-color-dark);
+      }
+    }
+
+    .text {
+      font-weight: bold;
+      font-size: 5vw;
+      color: var(--primary-color-dark);
+    }
+  }
+
+  .section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .carousel {
+    padding-top: 20vh;
+  }
+
+  .cad-drawing {
+    margin-top: 15vh;
+
+    --svg-color: rgb(255, 255, 255);
+
+    stroke: var(--svg-color) !important;
+
+    rect {
+      fill: none;
+      stroke: var(--svg-color) !important;
+    }
+
+    line {
+      fill: none;
+      stroke: var(--svg-color) !important;
+    }
+
+    path {
+      fill: none;
+      stroke: var(--svg-color) !important;
+    }
+
+  }
+}

@@ -1,0 +1,17 @@
+.home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .logo-wrapper {
+  width: 40vw;
+}
+.home .logo-wrapper .logo {
+  width: 100%;
+}
+.home .logo-wrapper .logo path {
+  fill: var(--primary-color-dark);
+}/*# sourceMappingURL=style.css.map */

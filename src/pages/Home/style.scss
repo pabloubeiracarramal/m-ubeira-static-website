@@ -1,0 +1,27 @@
+.home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo-wrapper {
+
+    width: 40vw;
+
+    .logo {
+
+      width: 100%;
+
+      path {
+        fill: var(--primary-color-dark);
+      }
+  
+    }
+  }
+
+  
+}
+
+

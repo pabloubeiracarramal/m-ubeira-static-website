@@ -1,0 +1,11 @@
+.text-carousel {
+    padding: 0 7.5vw;
+    font-size: 10vw;
+    font-weight: bold;
+    color: var(--primary-color-dark);
+
+    .highlight {
+        color: var(--primary-color-highlight);
+        display: inline-block;
+    }
+}

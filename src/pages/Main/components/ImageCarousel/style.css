@@ -1,0 +1,33 @@
+.images {
+  padding: 5vw 0;
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 5vw;
+  /* Hide the scrollbar for other browsers */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.images ::-webkit-scrollbar {
+  width: 0px; /* No vertical scrollbar */
+  height: 0px; /* No horizontal scrollbar */
+}
+.images .image {
+  max-width: 85vw;
+  height: 50vh; /* Set your desired height */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 5vw;
+  scroll-snap-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.images .image.elevated {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow */
+}
+.images .image:first-child {
+  margin-left: 5vw;
+}
+.images .image:last-child {
+  margin-right: 5vw;
+}/*# sourceMappingURL=style.css.map */
