@@ -4,14 +4,17 @@ import { motion } from "framer-motion";
 import "./style.css";
 import { ReactComponent as Logo } from "./../../images/LOGO.svg";
 
-const Home = () => {
+const isWIP = true;
 
+const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/main');
-    }, 1000); 
+      if (!isWIP) {
+        navigate("/main");
+      }
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
@@ -27,6 +30,11 @@ const Home = () => {
       >
         <Logo className="logo" />
       </motion.div>
+      {isWIP && (
+        <div className="wip">
+          <h1>Pagina web en desarrollo...</h1>
+        </div>
+      )}
     </motion.div>
   );
 };

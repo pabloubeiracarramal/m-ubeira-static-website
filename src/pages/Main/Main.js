@@ -47,7 +47,7 @@ const Main = () => {
     >
 
       {/* HEADER */}
-      <div className={`top ${isIntersecting ? "bg-added" : ""}`}>
+      <div className={'top'}>
         <Logo className="logo" ref={logoRef} />
         <div className="text">
           granitos <br /> y marmoles
@@ -63,7 +63,9 @@ const Main = () => {
 
 
       <div className="section" ref={sectionRef}>
-        <Cad className="cad-drawing" ref={cadRef} />
+        <div className="text">
+          llevamos desde 19XX  haciendo <br /> tus proyectos <br /> realidad
+        </div>
       </div>
     </motion.div>
   );

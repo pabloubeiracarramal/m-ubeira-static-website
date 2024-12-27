@@ -1,23 +1,20 @@
 .main {
   overflow-y: scroll;
-  height: 100vh;
+  height: 100dvh;
 }
 .main .top {
   position: fixed;
   top: 0;
   left: 0;
   margin-top: 7vw;
-  margin-left: 2vw;
-  margin-right: 10vw;
   padding: 3vw;
+  padding-left: 5vw;
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 7vw;
   transition: background-color 0.25s ease;
-}
-.main .top.bg-added {
-  background-color: rgba(255, 255, 255, 0.808);
-  border-radius: 3vw;
 }
 .main .top .logo {
   width: 20vw;
@@ -31,16 +28,16 @@
   color: var(--primary-color-dark);
 }
 .main .section {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .main .carousel {
-  padding-top: 20vh;
+  padding-top: 20dvh;
 }
 .main .cad-drawing {
-  margin-top: 15vh;
+  margin-top: 15dvh;
   --svg-color: rgb(255, 255, 255);
   stroke: var(--svg-color) !important;
 }

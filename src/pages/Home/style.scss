@@ -1,10 +1,12 @@
 .home {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10dvh;
 
   .logo-wrapper {
 
@@ -21,6 +23,11 @@
     }
   }
 
+  .wip {
+    width: 70%;
+    text-align: center;
+    color: var(--primary-color-dark);
+  }
   
 }
 
